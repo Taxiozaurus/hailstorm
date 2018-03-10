@@ -1,0 +1,37 @@
+.grid {
+	display: grid;
+	grid-template-columns: repeat($grid-columns, 1fr);
+
+	@for $i from 1 through $grid-columns {
+		$percentile: 100% / $i;
+		.col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i} {
+			display: inline-block;
+		}
+		.col-sm-#{$i} {
+			width: $percentile;
+			grid-column: span $i;
+		}
+		.col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i} {
+			width: 100%;
+			grid-column: span $grid-columns;
+		}
+		.col-md-#{$i} {
+			@media (min-width: $grid-md-min-width) {
+				width: $percentile;
+				grid-column: span $i;
+			}
+		}
+		.col-lg-#{$i} {
+			@media (min-width: $grid-lg-min-width) {
+				width: $percentile;
+				grid-column: span $i;
+			}
+		}
+		.col-xl-#{$i} {
+			@media (min-width: $grid-xl-min-width) {
+				width: $percentile;
+				grid-column: span $i;
+			}
+		}
+	}
+}

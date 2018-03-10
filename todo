@@ -1,0 +1,32 @@
+CSS
+
+[ ] Mobile first responsive design
+[ ] CSS Grid based layouting with flexbox fallback
+[ ] Pure CSS animated transitions
+[ ] Clean and spacious styling
+[ ] Multi layer element design
+[ ] A plethora of items:
+  [ ] Forms
+  [ ] Buttons
+  [ ] Progress bars
+  [ ] Panels
+  [ ] Cards
+  [ ] Alerts
+  [ ] Notifications
+  [ ] Banners
+  [ ] Lists
+  [ ] Pagination
+  [ ] Breadcrumbs
+  [ ] Navigation
+  [ ] Tables
+[ ] Sane typography with zipf spread
+[ ] Variable and calculation based colors
+
+JS
+
+[ ] Hoverable popups and tooltips
+[ ] Content modals
+[ ] Mobile overlay navigation
+[ ] Switches
+[ ] Tabbed content
+[ ] Autoloader
