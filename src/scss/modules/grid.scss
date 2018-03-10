@@ -3,33 +3,44 @@
 	grid-template-columns: repeat($grid-columns, 1fr);
 
 	@for $i from 1 through $grid-columns {
-		$percentile: 100% / $i;
-		.col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i} {
+		$percentile: 100% * ($i / $grid-columns);
+		.col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i} {
 			display: inline-block;
 		}
-		.col-sm-#{$i} {
-			width: $percentile;
-			grid-column: span $i;
-		}
+	}
+	@for $i from 1 through $grid-columns {
+		$percentile: 100% * ($i / $grid-columns);
 		.col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i} {
 			width: 100%;
 			grid-column: span $grid-columns;
 		}
+	}
+	@for $i from 1 through $grid-columns {
+		$percentile: 100% * ($i / $grid-columns);
+		.col-sm-#{$i} {
+			grid-column: span $i;
+		}
+	}
+	@for $i from 1 through $grid-columns {
+		$percentile: 100% * ($i / $grid-columns);
 		.col-md-#{$i} {
 			@media (min-width: $grid-md-min-width) {
-				width: $percentile;
 				grid-column: span $i;
 			}
 		}
+	}
+	@for $i from 1 through $grid-columns {
+		$percentile: 100% * ($i / $grid-columns);
 		.col-lg-#{$i} {
 			@media (min-width: $grid-lg-min-width) {
-				width: $percentile;
 				grid-column: span $i;
 			}
 		}
+	}
+	@for $i from 1 through $grid-columns {
+		$percentile: 100% * ($i / $grid-columns);
 		.col-xl-#{$i} {
 			@media (min-width: $grid-xl-min-width) {
-				width: $percentile;
 				grid-column: span $i;
 			}
 		}
