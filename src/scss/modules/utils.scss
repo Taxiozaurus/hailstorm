@@ -1,0 +1,20 @@
+@for $i from 1 through 10 {
+	$padding: $padding-increment * $i;
+	.pad-#{$padding} {
+		padding: #{$padding}px;
+	}
+	.pad-v-#{$padding} {
+		padding-top: #{$padding}px;
+		padding-bottom: #{$padding}px;
+	}
+	.pad-h-#{$padding} {
+		padding-left: #{$padding}px;
+		padding-right: #{$padding}px;
+	}
+	.pad-l-#{$padding} {
+		padding-left: #{$padding}px;
+	}
+	.pad-r-#{$padding} {
+		padding-right: #{$padding}px;
+	}
+}
