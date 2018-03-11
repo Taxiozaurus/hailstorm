@@ -8,7 +8,25 @@ $grid-xl-min-width: 1440px;
 $padding-increment: 5;
 
 // Typography
+$font-base: 16px;
+$font-h1: $font-base * 4;
+$font-h2: $font-base * 2;
+$font-h3: $font-base * 1.5;
+$font-h4: $font-base * 1.2;
+$font-h5: $font-base * 1.1;
 
 // Forms
 
 // Blocks
+
+// Colors
+$c-main: #fafafa;
+$c-default: #999;
+$c-dark: #333;
+$c-accent: #31acff;
+$c-success: #37be0e;
+$c-warning: #e7ae10;
+$c-danger: #c40808;
+
+// Styles
+$shadow: 0 0 #{$padding-increment*2}px #{$padding-increment * 0.5}px $c-default;
