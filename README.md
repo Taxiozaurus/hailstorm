@@ -9,7 +9,7 @@ A modern CSS framework created with SCSS and all latest and greatest CSS trends 
 As part of the framework you get the following:
 
 * Mobile first responsive design
-* CSS Grid based layouting with flexbox fallback
+* CSS Grid based layouting
 * Pure CSS animated transitions
 * Clean and spacious styling
 * Multi layer element design

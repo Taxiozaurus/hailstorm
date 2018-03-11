@@ -1,47 +1,68 @@
+// CSS Grid shortcuts
 .grid {
 	display: grid;
 	grid-template-columns: repeat($grid-columns, 1fr);
 
-	@for $i from 1 through $grid-columns {
-		$percentile: 100% * ($i / $grid-columns);
-		.col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i} {
-			display: inline-block;
+	// Base column class. must be inside a grid
+	.col {
+		display: inline-block;
+		width: 100%;
+		grid-column: span $grid-columns;
+
+		// Base supplement classes
+		&.full {
+			grid-column-end: -1 !important;
 		}
-	}
-	@for $i from 1 through $grid-columns {
-		$percentile: 100% * ($i / $grid-columns);
-		.col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i} {
-			width: 100%;
-			grid-column: span $grid-columns;
+		&.tall {
+			grid-row-start: 1;
+			grid-row-end: span $grid-columns;
 		}
-	}
-	@for $i from 1 through $grid-columns {
-		$percentile: 100% * ($i / $grid-columns);
-		.col-sm-#{$i} {
-			grid-column: span $i;
-		}
-	}
-	@for $i from 1 through $grid-columns {
-		$percentile: 100% * ($i / $grid-columns);
-		.col-md-#{$i} {
-			@media (min-width: $grid-md-min-width) {
+
+		@for $i from 1 through $grid-columns {
+			// Column height override
+			&.rows-#{$i} {
+				grid-row-end: span $i;
+			}
+
+			// Mobile grid
+			&.sm-#{$i} {
 				grid-column: span $i;
 			}
-		}
-	}
-	@for $i from 1 through $grid-columns {
-		$percentile: 100% * ($i / $grid-columns);
-		.col-lg-#{$i} {
-			@media (min-width: $grid-lg-min-width) {
-				grid-column: span $i;
+			&.sm-start-#{$i} {
+				grid-column-start: $i;
 			}
 		}
-	}
-	@for $i from 1 through $grid-columns {
-		$percentile: 100% * ($i / $grid-columns);
-		.col-xl-#{$i} {
-			@media (min-width: $grid-xl-min-width) {
-				grid-column: span $i;
+		@media (min-width: $grid-md-min-width) {
+			// Tablet grid
+			@for $i from 1 through $grid-columns {
+				&.md-#{$i} {
+					grid-column: span $i;
+				}
+				&.md-start-#{$i} {
+					grid-column-start: $i;
+				}
+			}
+		}
+		@media (min-width: $grid-lg-min-width) {
+			// Desktop grid
+			@for $i from 1 through $grid-columns {
+				&.lg-#{$i} {
+					grid-column: span $i;
+				}
+				&.lg-start-#{$i} {
+					grid-column-start: $i;
+				}
+			}
+		}
+		@media (min-width: $grid-xl-min-width) {
+			// Extra large screen grid
+			@for $i from 1 through $grid-columns {
+				&.xl-#{$i} {
+					grid-column: span $i;
+				}
+				&.xl-start-#{$i} {
+					grid-column-start: $i;
+				}
 			}
 		}
 	}
