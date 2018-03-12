@@ -7,7 +7,7 @@
 	width: auto;
 
 	& &-heading {
-		font-size: $font-h3;
+		font-size: $font-base * 1.5;
 		border-bottom: 1px solid $c-default;
 	}
 	& &-footer {
