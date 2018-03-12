@@ -46,4 +46,4 @@ Additionally framework ships with a select set of Vanilla JS modules to augment 
 
 ## Preview
 
-<iframe src="https://rawgit.com/Taxiozaurus/hailstorm/master/index.html"></iframe>
+https://rawgit.com/Taxiozaurus/hailstorm/master/index.html
