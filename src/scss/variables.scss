@@ -4,8 +4,11 @@ $grid-md-min-width: 660px;
 $grid-lg-min-width: 1100px;
 $grid-xl-min-width: 1440px;
 
+// General
+$border-radius: 2px;
+
 // Utils
-$padding-increment: 5;
+$spacing-increment: 5;
 
 // Typography
 $font-base: 16px;
@@ -26,7 +29,7 @@ $c-danger: #c40808;
 
 // Style presets
 $shadow: 0px // h-offset
-	#{$padding-increment}px // h-offset
-	#{$padding-increment*2}px // blur
-	#{$padding-increment * 0.5}px // spread
+	#{$spacing-increment}px // h-offset
+	#{$spacing-increment*2}px // blur
+	#{$spacing-increment * 0.5}px // spread
 	$c-default;

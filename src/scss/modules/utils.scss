@@ -1,5 +1,5 @@
 @for $i from 1 through 10 {
-	$padding: $padding-increment * $i;
+	$padding: $spacing-increment * $i;
 	.pad-#{$padding} {
 		padding: #{$padding}px;
 	}
@@ -17,4 +17,16 @@
 	.pad-r-#{$padding} {
 		padding-right: #{$padding}px;
 	}
+}
+
+pre {
+	background-color: $c-main;
+	border: 1px solid darken($c-main, 20%);
+	color: $c-contrast;
+	padding: #{$spacing-increment * 2}px;
+	margin: #{$spacing-increment * 2}px 0;
+	tab-size: 4;
+	font-family: monospace;
+	font-size: $font-base * .8;
+	border-radius: $border-radius;
 }
