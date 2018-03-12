@@ -10,6 +10,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		elem.parentNode.classList.add('dismiss');
 		setTimeout(function() {
 			elem.parentNode.remove();
-		}, 2000);
+		}, 1000);
 	}
 }, false);

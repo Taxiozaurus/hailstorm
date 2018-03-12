@@ -1,6 +1,6 @@
 .alert {
-	display: block;
-	width: auto;
+	display: inline-block;
+	width: 100%;
 	padding: #{$spacing-increment * 3}px;
 	margin: #{$spacing-increment * 2}px 0;
 	background-color: $c-main + $c-default;
