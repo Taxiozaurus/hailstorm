@@ -1,0 +1,23 @@
+.alert {
+	display: block;
+	width: auto;
+	padding: #{$spacing-increment * 3}px;
+	margin: #{$spacing-increment * 2}px 0;
+	background-color: $c-main + $c-default;
+	border: 1px solid $c-default + $c-contrast;
+	border-left-width: #{$spacing-increment}px;
+	border-radius: $border-radius;
+
+	&.info {
+		border-color: $c-accent;
+	}
+	&.success {
+		border-color: $c-success;
+	}
+	&.warning {
+		border-color: $c-warning;
+	}
+	&.danger {
+		border-color: $c-danger;
+	}
+}

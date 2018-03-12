@@ -8,6 +8,7 @@
 	padding: #{$spacing-increment}px;
 	margin: #{$spacing-increment * 3}px;
 	border-radius: $border-radius;
+	transition: box-shadow .3s ease-in-out;
 	cursor: pointer;
 
 	&:after {
@@ -22,6 +23,9 @@
 		width: 100%;
 		height: 50px;
 		transition: bottom .3s ease-in-out;
+	}
+	&:hover {
+		box-shadow: $shadow-hover;
 	}
 
 	&.flexible {

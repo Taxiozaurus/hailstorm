@@ -1,5 +1,7 @@
 // Import variables
 @import "variables.scss";
+// Import animations
+@import "animations.scss";
 
 * {
 	box-sizing: border-box;
@@ -39,3 +41,4 @@ html, body {
 @import "modules/typography.scss";
 @import "modules/panel.scss";
 @import "modules/card.scss";
+@import "modules/alert.scss";

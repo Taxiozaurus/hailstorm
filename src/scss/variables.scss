@@ -33,3 +33,9 @@ $shadow: 0px // h-offset
 	#{$spacing-increment*2}px // blur
 	#{$spacing-increment * 0.5}px // spread
 	$c-default;
+$shadow-hover:
+	0px // h-offset
+	#{$spacing-increment}px // h-offset
+	#{$spacing-increment*2}px // blur
+	#{$spacing-increment * 0.5}px // spread
+	darken($c-default, 15%);
