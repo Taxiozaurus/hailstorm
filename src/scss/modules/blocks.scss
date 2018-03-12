@@ -1,0 +1,108 @@
+.panel {
+	display: block;
+	padding: #{$padding-increment * 2}px;
+	margin: #{$padding-increment * 3}px;
+	box-shadow: $shadow;
+	background-color: $c-main;
+	width: auto;
+
+	& &-heading {
+		font-size: $font-h3;
+		border-bottom: 1px solid $c-default;
+	}
+	& &-footer {
+		margin-top: #{$padding-increment * 2}px;
+		border-top: 1px solid $c-default;
+		text-align: right;
+		color: $c-default;
+	}
+	& &-body, & &-heading, & &-footer {
+		display: block;
+		padding: #{$padding-increment * 2}px;
+	}
+}
+
+.card {
+	position: relative;
+	box-shadow: $shadow;
+	display: inline-block;
+	width: 200px;
+	height: 300px;
+	overflow: hidden;
+	padding: #{$padding-increment}px;
+	margin: #{$padding-increment * 3}px;
+	cursor: pointer;
+
+	&:after {
+		content: '';
+		text-align: center;
+		color: $c-contrast;
+		display: inline-block;
+		background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: 50px;
+	}
+
+	&.flexible {
+		width: auto;
+	}
+	&.hover:hover, &.tap:focus, &.open {
+		.card-image {
+			margin-top: -#{$padding-increment + 150}px;
+		}
+		.card-content {
+			pointer-events: auto;
+			overflow-y: auto;
+			height: 100%;
+			height: calc(100% - 5px);
+		}
+	}
+	&.tap:focus {
+		pointer-events: none;
+	}
+
+	& &-image {
+		position: relative;
+		width: auto;
+		display: block;
+		margin: -#{$padding-increment}px;
+		height: 150px;
+		overflow: hidden;
+		text-align: center;
+		background-color: $c-main;
+		margin-bottom: 0;
+		transition: margin-top .3s ease-in-out;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	& &-title {
+		display: block;
+		font-size: $font-base;
+		background-color: $c-contrast;
+		color: $c-main;
+		padding: #{$padding-increment * 3}px #{$padding-increment * 2}px;
+		margin: 0 -#{$padding-increment}px;
+		transition: margin-top .3s ease-in-out
+					height .3s ease-in-out;
+	}
+
+	& &-content {
+		display: block;
+		height: auto;
+		min-height: 100%;
+		overflow: hidden;
+		background-color: $c-p-background;
+		color: $c-contrast;
+		padding: #{$padding-increment * 2}px;
+		margin: -#{$padding-increment}px;
+		margin-top: 0;
+	}
+}

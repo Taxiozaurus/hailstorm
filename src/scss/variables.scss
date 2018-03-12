@@ -20,13 +20,18 @@ $font-h5: $font-base * 1.1;
 // Blocks
 
 // Colors
-$c-main: #fafafa;
+$c-p-background: #fff;
+$c-main: #f7f7f7;
 $c-default: #999;
-$c-dark: #333;
+$c-contrast: #333;
 $c-accent: #31acff;
 $c-success: #37be0e;
 $c-warning: #e7ae10;
 $c-danger: #c40808;
 
-// Styles
-$shadow: 0 0 #{$padding-increment*2}px #{$padding-increment * 0.5}px $c-default;
+// Style presets
+$shadow: 0px // h-offset
+	#{$padding-increment}px // h-offset
+	#{$padding-increment*2}px // blur
+	#{$padding-increment * 0.5}px // spread
+	$c-default;

@@ -5,9 +5,32 @@
 	box-sizing: border-box;
 	margin: 0px;
 	padding: 0px;
-	color: $c-dark;
+	color: $c-contrast;
 	font-size: $font-base;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+
+	&:focus, &:active {
+		outline: none !important;
+	}
+}
+
+html, body {
+	min-height: 100%;
+	min-height: 100vh;
+	background-color: $c-p-background;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: $c-main;
+}
+::-webkit-scrollbar-thumb {
+	background: $c-default;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: $c-contrast;
 }
 
 // Import modules
