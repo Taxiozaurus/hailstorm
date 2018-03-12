@@ -7,17 +7,56 @@
 	border: 1px solid $c-default + $c-contrast;
 	border-left-width: #{$spacing-increment}px;
 	border-radius: $border-radius;
+	position: relative;
+	clear: both;
 
 	&.info {
 		border-color: $c-accent;
+		color: darken($c-accent + $c-contrast, 20%);
 	}
 	&.success {
 		border-color: $c-success;
+		color: darken($c-success + $c-contrast, 20%);
 	}
 	&.warning {
 		border-color: $c-warning;
+		color: darken($c-warning + $c-contrast, 20%);
 	}
 	&.danger {
 		border-color: $c-danger;
+		color: darken($c-danger + $c-contrast, 20%);
+	}
+
+	&.shaded {
+		box-shadow: $shadow;
+		margin: #{$spacing-increment * 3}px 0;
+		&:hover {
+			box-shadow: $shadow-hover;
+		}
+	}
+
+	&.dismiss {
+		animation-name: dismiss;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+	}
+
+	.dismiss-btn {
+		position: absolute;
+		top: #{$spacing-increment * 3}px;
+		right: #{$spacing-increment * 3}px;
+		display: inline-block;
+		width: $font-base;
+		height: $font-base;
+		line-height: $font-base;
+		font-size: $font-base * 1.8;
+		border: 0px;
+		background: none;
+		cursor: pointer;
+		color: $c-default;
+		transition: color .3s ease-in-out;
+		&:hover {
+			color: $c-contrast;
+		}
 	}
 }

@@ -1,0 +1,23 @@
+@keyframes dismiss {
+	0% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	95% {
+		height: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-50px);
+		display: none;
+		height: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+}
