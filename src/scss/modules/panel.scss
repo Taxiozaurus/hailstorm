@@ -1,0 +1,34 @@
+.panel {
+	display: block;
+	padding: #{$spacing-increment * 2}px;
+	margin: #{$spacing-increment * 3}px;
+	box-shadow: $shadow;
+	background-color: $c-main;
+	width: auto;
+	border-radius: $border-radius;
+
+	& &-heading {
+		font-size: $font-base * 1.5;
+		border-bottom: 1px solid $c-default;
+	}
+	& &-footer {
+		margin-top: #{$spacing-increment * 2}px;
+		border-top: 1px solid $c-default;
+		text-align: right;
+		color: $c-default;
+	}
+	& &-body, & &-heading, & &-footer {
+		display: block;
+		padding: #{$spacing-increment * 2}px;
+
+		&> .grid {
+			margin-left: -#{$spacing-increment * 4}px;
+			margin-right: -#{$spacing-increment * 4}px;
+		}
+	}
+
+	&> .grid {
+		margin-left: -#{$spacing-increment * 2}px;
+		margin-right: -#{$spacing-increment * 2}px;
+	}
+}

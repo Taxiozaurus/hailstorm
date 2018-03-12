@@ -1,0 +1,98 @@
+.card {
+	position: relative;
+	box-shadow: $shadow;
+	display: inline-block;
+	width: 200px;
+	height: 300px;
+	overflow: hidden;
+	padding: #{$spacing-increment}px;
+	margin: #{$spacing-increment * 3}px;
+	border-radius: $border-radius;
+	cursor: pointer;
+
+	&:after {
+		content: '';
+		text-align: center;
+		color: $c-contrast;
+		display: inline-block;
+		background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: 50px;
+		transition: bottom .3s ease-in-out;
+	}
+
+	&.flexible {
+		width: auto;
+	}
+	&.hover:hover, &.tap:focus, &.open {
+		&:after {
+			bottom: -50px;
+		}
+		.card-image {
+			margin-top: -#{$spacing-increment + 150}px;
+		}
+		.card-title {
+			font-size: 0px;
+			min-height: 0px;
+			padding-top: #{$spacing-increment * 2}px;
+			padding-bottom: 0px;
+		}
+		.card-content {
+			cursor: auto;
+			pointer-events: auto;
+			overflow-y: auto;
+			height: 100%;
+			height: calc(100% - #{$spacing-increment * 2}px);
+		}
+	}
+	&.tap:focus {
+		pointer-events: none;
+	}
+
+	& &-image {
+		position: relative;
+		width: auto;
+		display: block;
+		margin: -#{$spacing-increment}px;
+		height: 150px;
+		overflow: hidden;
+		text-align: center;
+		background-color: $c-main;
+		margin-bottom: 0;
+		transition: margin-top .3s ease-in-out;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	& &-title {
+		height: auto;
+		display: block;
+		font-size: $font-base;
+		background-color: $c-contrast;
+		color: $c-main;
+		padding: #{$spacing-increment * 3}px #{$spacing-increment * 2}px;
+		margin: 0 -#{$spacing-increment}px;
+		transition: padding-top .3s ease-in-out,
+					padding-bottom .3s ease-in-out,
+					font-size .3s ease-in-out;
+	}
+
+	& &-content {
+		display: block;
+		height: auto;
+		min-height: 100%;
+		overflow: hidden;
+		background-color: $c-p-background;
+		color: $c-contrast;
+		padding: #{$spacing-increment * 2}px;
+		margin: -#{$spacing-increment}px;
+		margin-top: 0;
+	}
+}

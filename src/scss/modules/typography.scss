@@ -1,0 +1,14 @@
+@for $i from 1 through 5 {
+	h#{$i} {
+		display: block;
+		font-size: $font-base * 4 / $i;
+		margin-top: #{$spacing-increment * 2}px;
+		margin-bottom: #{$spacing-increment}px;
+	}
+}
+p {
+	font-size: $font-base;
+}
+small, sub, sup {
+	font-size: $font-base / 1.5;
+}
