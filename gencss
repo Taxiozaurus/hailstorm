@@ -3,3 +3,4 @@ echo "Compiling...";
 node-sass src/scss/core.scss > hailstorm.css
 echo "Prefixing...";
 postcss hailstorm.css --use autoprefixer -d ./
+dos2unix hailstorm.css
