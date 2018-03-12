@@ -29,7 +29,6 @@
 
 	&.shaded {
 		box-shadow: $shadow;
-		margin: #{$spacing-increment * 3}px 0;
 		transition: box-shadow .3s ease-in-out;
 		&:hover {
 			box-shadow: $shadow-hover;
