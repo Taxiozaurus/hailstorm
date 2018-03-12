@@ -1,8 +1,14 @@
 # Hailstorm - CSS
 
+<img src="https://raw.githubusercontent.com/Taxiozaurus/hailstorm/master/LOGO-Transparent.png" width="250" heigh="250" alt="Hailstorm CSS">
+
 Get a frosty bite of freshness in your web adventures with Hailstorm.
 
 A modern CSS framework created with SCSS and all latest and greatest CSS trends out there.
+
+## Disclaimer
+
+Project is in an early WIP state!
 
 ## Features
 
