@@ -8,6 +8,9 @@
 	&.shaded {
 		box-shadow: $shadow;
 	}
+	&.tall {
+		min-height: 100vh !important;
+	}
 
 	img {
 		width: 100%;
