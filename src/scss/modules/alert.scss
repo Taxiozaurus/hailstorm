@@ -2,6 +2,7 @@
 	display: inline-block;
 	width: 100%;
 	padding: #{$spacing-increment * 3}px;
+	padding-right: #{$spacing-increment * 6}px;
 	margin: #{$spacing-increment * 2}px 0;
 	background-color: $c-main + $c-default;
 	border: 1px solid $c-default + $c-contrast;
@@ -36,12 +37,6 @@
 		}
 	}
 
-	&.dismiss {
-		animation-name: dismiss;
-		animation-duration: .5s;
-		animation-fill-mode: forwards;
-	}
-
 	.dismiss-btn {
 		position: absolute;
 		top: #{$spacing-increment * 3}px;
@@ -56,6 +51,7 @@
 		cursor: pointer;
 		color: $c-default;
 		transition: color .3s ease-in-out;
+		user-select: none;
 		&:hover {
 			color: $c-contrast;
 		}
