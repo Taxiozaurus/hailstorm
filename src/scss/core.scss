@@ -10,16 +10,30 @@
 	color: $c-contrast;
 	font-size: $font-base;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	z-index: 1;
 
 	&:focus, &:active {
 		outline: none !important;
 	}
 }
 
-html, body {
+html, body, .page {
 	min-height: 100%;
 	min-height: 100vh;
 	background-color: $c-p-background;
+}
+
+.page {
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+	perspective: 10px;
+	transform-style: preserve-3d;
+}
+
+div {
+	position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -36,8 +50,8 @@ html, body {
 }
 
 // Import modules
-@import "modules/grid.scss";
 @import "modules/utils.scss";
+@import "modules/grid.scss";
 @import "modules/typography.scss";
 @import "modules/panel.scss";
 @import "modules/card.scss";

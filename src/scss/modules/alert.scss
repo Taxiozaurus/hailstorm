@@ -29,12 +29,8 @@
 		color: darken($c-danger + $c-contrast, 20%);
 	}
 
-	&.shaded {
-		box-shadow: $shadow;
-		transition: box-shadow .3s ease-in-out;
-		&:hover {
-			box-shadow: $shadow-hover;
-		}
+	&.shaded:hover {
+		box-shadow: $shadow-hover;
 	}
 
 	.dismiss-btn {

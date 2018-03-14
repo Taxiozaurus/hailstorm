@@ -14,7 +14,7 @@
 			text-shadow: 0px // h-offset
 				#{$spacing-increment}px // v-offset
 				#{$spacing-increment*2}px // blur
-				$c-default;
+				$c-shadow;
 		}
 		&.inverted {
 			color: $c-main;

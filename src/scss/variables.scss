@@ -26,12 +26,19 @@ $c-accent: #31acff;
 $c-success: #37be0e;
 $c-warning: #e7ae10;
 $c-danger: #c40808;
+$c-shadow: rgba(0,0,0,0.3);
+$c-shadow-intense: rgba(0,0,0,0.4);
+$c-shadow-less: rgba(0,0,0,0.2);
 
 // Style presets
-$shadow-position: 0px // h-offset
-	#{$spacing-increment}px // v-offset
-	#{$spacing-increment*2}px // blur
-	#{$spacing-increment * 0.5}px; // spread
-$shadow: $shadow-position $c-default;
-$shadow-hover: $shadow-position darken($c-default, 15%);
-$shadow-inverted: $shadow-position $c-main;
+@function gen-shadow($size, $color) {
+	@return 0px #{$size}px #{$size*2}px #{$size*0.5}px $color;
+}
+
+$shadow: gen-shadow($spacing-increment, $c-shadow);
+$shadow-hover: gen-shadow($spacing-increment, $c-shadow-intense);
+$shadow-inverted: gen-shadow($spacing-increment, $c-shadow-less);
+
+$shadow-double: gen-shadow($spacing-increment * 2, $c-shadow);
+$shadow-double-hover: gen-shadow($spacing-increment * 2, $c-shadow-intense);
+$shadow-double-inverted: gen-shadow($spacing-increment * 2, $c-shadow-less);

@@ -36,3 +36,62 @@ pre {
 	width: auto;
 	clear: both;
 }
+
+.bg-page {
+	background-color: $c-p-background ;
+}
+.bg-main {
+	background-color: $c-main ;
+}
+.bg-default {
+	background-color: $c-default ;
+}
+.bg-contrast {
+	background-color: $c-contrast ;
+}
+.bg-accent {
+	background-color: $c-accent ;
+}
+.bg-success {
+	background-color: $c-success ;
+}
+.bg-warning {
+	background-color: $c-warning ;
+}
+.bg-danger {
+	background-color: $c-danger ;
+}
+
+.c-page {
+	color: $c-p-background ;
+}
+.c-main {
+	color: $c-main ;
+}
+.c-default {
+	color: $c-default ;
+}
+.c-contrast {
+	color: $c-contrast ;
+}
+.c-accent {
+	color: $c-accent ;
+}
+.c-success {
+	color: $c-success ;
+}
+.c-warning {
+	color: $c-warning ;
+}
+.c-danger {
+	color: $c-danger ;
+}
+
+div.shaded {
+	box-shadow: $shadow;
+	transition: box-shadow .3s ease-in-out;
+
+	&.double-shaded {
+		box-shadow: $shadow-double;
+	}
+}
