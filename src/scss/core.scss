@@ -30,6 +30,17 @@ html, body, .page {
 	position: relative;
 	perspective: 10px;
 	transform-style: preserve-3d;
+	& > .parallax {
+		display: flex;
+		flex: 1 0 auto;
+		position: relative;
+		height: 100vh;
+		transform: translateZ(-10px) scale(2);
+		z-index: -1;
+		* {
+			z-index: 0;
+		}
+	}
 }
 
 div {

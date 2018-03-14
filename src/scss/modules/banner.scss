@@ -9,15 +9,7 @@
 		min-height: 100vh !important;
 	}
 	&.parallax {
-		display: flex;
-		flex: 1 0 auto;
-		position: relative;
-		height: 100vh;
 		transform: translateZ(-9px) scale(2);
-		z-index: -1;
-		* {
-			z-index: 0;
-		}
 	}
 
 	img {
