@@ -1,0 +1,9 @@
+input, select {
+    &.form-input {
+        font-size: $font-base;
+        border-radius: $border-radius;
+        padding: $spacing-increment * 2;
+        width: 100%;
+        border: 1px solid $c-main;
+    }
+}
