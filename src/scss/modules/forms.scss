@@ -1,9 +1,39 @@
-input, select {
+input, select, textarea {
     &.form-input {
         font-size: $font-base;
         border-radius: $border-radius;
         padding: $spacing-increment * 2;
         width: 100%;
         border: 1px solid $c-default;
+        position: relative;
+        display: block;
+        transition: border-color .2s;
+        &:focus {
+            border-color: $c-accent;
+        }
+        &:not(:valid) {
+            border-color: $c-danger;
+        }
+    }
+}
+.form-input-wrapper {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    input, select, textarea {
+        &.form-input {
+            border: none;
+            background: none;
+        }
+    }
+    &:before {
+        content: ' ';
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        display: inline-block;
+        width: 100%;
+        background-color: $c-default;
+        height: 1px;
     }
 }
