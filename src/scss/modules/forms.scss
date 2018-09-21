@@ -5,6 +5,7 @@ input, select, textarea {
         padding: $spacing-increment * 2;
         width: 100%;
         border: 1px solid $c-default;
+        border-radius: $border-radius;
         position: relative;
         display: block;
         transition: border-color .2s;
