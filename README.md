@@ -64,3 +64,13 @@ How to push new branches
 ```
 git push origin -u <new_branch_name>
 ```
+
+## Compiling
+
+You need to install node.js and add a global installation of node-sass, postcss and autoprefixer modules.
+
+Install the required node modules like so:
+
+```
+npm install -g node-sass postcss-cli autoprefixer
+```
