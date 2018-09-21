@@ -70,7 +70,13 @@ git push origin -u <new_branch_name>
 You need to install node.js and add a global installation of node-sass, postcss and autoprefixer modules.
 
 Install the required node modules like so:
-
 ```
 npm install -g node-sass postcss-cli autoprefixer
+```
+
+Once done you can compile the .css from the .scss source via the `gencss` bash/sh script
+
+Run like so:
+```
+./gencss
 ```
