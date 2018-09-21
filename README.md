@@ -47,3 +47,20 @@ Additionally framework ships with a select set of Vanilla JS modules to augment 
 ## Preview
 
 https://rawgit.com/Taxiozaurus/hailstorm/master/
+
+## For Collaborators
+
+How to pull to local
+```
+git clone git@github.com:Taxiozaurus/hailstorm.git
+```
+
+How to create new branches
+```
+git checkout -b <new_branch_name>
+```
+
+How to push new branches
+```
+git push origin -u <new_branch_name>
+```
