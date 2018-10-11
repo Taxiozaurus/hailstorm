@@ -25,16 +25,22 @@ input, select, textarea {
         &.form-input {
             border: none;
             background: none;
+            &:focus + .form-fancy-input-bar {
+                background-color: $c-accent;
+            }
+            &:not(:valid) + .form-fancy-input-bar {
+                background-color: $c-danger;
+            }
         }
     }
-    &:before {
-        content: ' ';
+    .form-fancy-input-bar {
         position: absolute;
         bottom: 0px;
         left: 0px;
         display: inline-block;
         width: 100%;
         background-color: $c-default;
-        height: 1px;
+        height: 2px;
+        transition: background-color .2s;
     }
 }
