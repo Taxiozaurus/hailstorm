@@ -6,8 +6,11 @@ CSS
 [ ] Clean and spacious styling
 [ ] Multi layer element design
 [ ] A plethora of items:
-  [ ] Forms
-  [ ] Buttons
+  [W] Forms
+    [Y] Inputs + Textboxes
+    [ ] Select (single + multiple) box
+    [ ] Check + Radio inputs
+    [ ] Buttons
   [ ] Progress bars
   [Y] Panels
   [Y] Cards
