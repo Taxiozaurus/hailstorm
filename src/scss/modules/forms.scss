@@ -1,8 +1,7 @@
 input, select, textarea {
     &.form-input {
         font-size: $font-base;
-        border-radius: $border-radius;
-        padding: $spacing-increment * 2;
+        padding: $spacing-increment * 2px;
         width: 100%;
         border: 1px solid $c-default;
         border-radius: $border-radius;
@@ -15,8 +14,20 @@ input, select, textarea {
         &:not(:valid) {
             border-color: $c-danger;
         }
+        option {
+            padding: 1px * $spacing-increment 3px * $spacing-increment;
+            &[disabled] {
+                color: $c-default;
+            }
+        }
     }
 }
+select.form-input[multiple] {
+    padding-left: 0px;
+    padding-right: 0px;
+    height: $font-base * 8 - $spacing-increment * 6;
+}
+
 .form-input-wrapper {
     width: 100%;
     padding: 0px;

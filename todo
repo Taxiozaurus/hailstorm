@@ -8,7 +8,7 @@ CSS
 [ ] A plethora of items:
   [W] Forms
     [Y] Inputs + Textboxes
-    [ ] Select (single + multiple) box
+    [Y] Select (single + multiple) box
     [ ] Check + Radio inputs
     [ ] Buttons
   [ ] Progress bars
