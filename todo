@@ -9,7 +9,7 @@ CSS
   [W] Forms
     [Y] Inputs + Textboxes
     [Y] Select (single + multiple) box
-    [ ] Check + Radio inputs
+    [Y] Check + Radio inputs
     [ ] Buttons
   [ ] Progress bars
   [Y] Panels

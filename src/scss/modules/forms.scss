@@ -1,49 +1,95 @@
-input, select, textarea {
-    &.form-input {
-        font-size: $font-base;
-        padding: $spacing-increment * 2px;
-        width: 100%;
-        border: 1px solid $c-default;
-        border-radius: $border-radius;
-        position: relative;
-        display: block;
-        transition: border-color .2s;
-        &:focus {
-            border-color: $c-accent;
+// Universal form input styles
+input.form-input, 
+select.form-input, 
+textarea.form-input {
+    font-size: $font-base;
+    padding: $spacing-increment * 2px;
+    width: 100%;
+    border: 1px solid $c-default;
+    border-radius: $border-radius;
+    position: relative;
+    display: block;
+    transition: border-color .2s;
+    &:focus {
+        border-color: $c-accent;
+        & + .form-fancy-input-bar {
+            background-color: $c-accent;
         }
-        &:not(:valid) {
-            border-color: $c-danger;
-        }
-        option {
-            padding: 1px * $spacing-increment 3px * $spacing-increment;
-            &[disabled] {
-                color: $c-default;
-            }
+    }
+    &:not(:valid) {
+        border-color: $c-danger;
+        & + .form-fancy-input-bar {
+            background-color: $c-danger;
         }
     }
 }
-select.form-input[multiple] {
-    padding-left: 0px;
-    padding-right: 0px;
-    height: $font-base * 8 - $spacing-increment * 6;
-    border-right-width: 2px;
+// Input specific styles
+select.form-input {
+    &[multiple] {
+        padding-left: 0px;
+        padding-right: 0px;
+        height: $font-base * 8 - $spacing-increment * 6;
+        border-right-width: 2px;
+    }
+    option {
+        padding: 1px * $spacing-increment 3px * $spacing-increment;
+        &[disabled] {
+            color: $c-default;
+        }
+    }
 }
-
+input.form-input {
+    &[type="radio"], &[type="checkbox"] {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin: 2px * $spacing-increment;
+        &.form-fancy:before {
+            background-color: $c-main;
+        }
+        &:before, &:after {
+            content: ' ';
+            position: absolute;
+        }
+        &:before {
+            width: $font-base;
+            height: $font-base;
+            top: 0px;
+            left: 0px;
+            border: 1px solid $c-default;
+            border-radius: $border-radius;
+            background-color: white;
+        }
+        &:after {
+            border: 1px solid transparent;
+            top: 0.2em;
+            left: 0.2em;
+            width: 0.6em;
+            height: 0.6em;
+        }
+        &:checked:after {
+            background-color: $c-default;
+        }
+        &:hover:before {
+            background-color: darken($c-main, 10%);
+        }
+    }
+    &[type="radio"] {
+        &:before, &:after {
+            border-radius: 50%;
+        }
+    }
+}
+// Style overrides for special look
 .form-input-wrapper {
     width: 100%;
     padding: 0px;
     margin: 0px;
-    input, select, textarea {
-        &.form-input {
-            border: none;
-            background: none;
-            &:focus + .form-fancy-input-bar {
-                background-color: $c-accent;
-            }
-            &:not(:valid) + .form-fancy-input-bar {
-                background-color: $c-danger;
-            }
-        }
+    input.form-input, 
+    select.form-input, 
+    textarea.form-input {
+        border: none;
+        background: none;
     }
     .form-fancy-input-bar {
         position: absolute;

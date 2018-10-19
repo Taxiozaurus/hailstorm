@@ -26,18 +26,7 @@ window.Hailstorm = new function() {
 		});
 
 		// Update fancy form elements to have appropriate wrappers
-		var inputs = document.querySelectorAll('.form-input.form-fancy:not(.ready)');
-		var inputWrapper = document.createElement('div');
-		inputWrapper.classList.add('form-input-wrapper');
-		var inputBar = document.createElement('div');
-		inputBar.classList.add('form-fancy-input-bar');
-		Array.prototype.forEach.call(inputs, function(elem) {
-			var wrapperClone = inputWrapper.cloneNode();
-			elem.parentNode.insertBefore(wrapperClone, elem);
-			wrapperClone.appendChild(elem);
-			wrapperClone.appendChild(inputBar.cloneNode());
-			elem.classList.add('ready');
-		});
+		_prepareFancyInputs();
 	}
 
 	/**
@@ -54,6 +43,29 @@ window.Hailstorm = new function() {
 			root.remove();
 		}, 700);
 		return true;
+	}
+
+	/**
+	 * Wrap around all input elements marked for fancy styling
+	 */
+	function _prepareFancyInputs() {
+		var inputs = document.querySelectorAll(
+			'.form-input.form-fancy:not(.ready):not([type=radio]):not([type=checkbox])'
+		);
+
+		var inputWrapper = document.createElement('div');
+		inputWrapper.classList.add('form-input-wrapper');
+
+		var inputBar = document.createElement('div');
+		inputBar.classList.add('form-fancy-input-bar');
+
+		Array.prototype.forEach.call(inputs, function(elem) {
+			var wrapperClone = inputWrapper.cloneNode();
+			elem.parentNode.insertBefore(wrapperClone, elem);
+			wrapperClone.appendChild(elem);
+			wrapperClone.appendChild(inputBar.cloneNode());
+			elem.classList.add('ready');
+		});
 	}
 
 	this.init = function() {
