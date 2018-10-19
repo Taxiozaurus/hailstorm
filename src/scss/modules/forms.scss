@@ -26,6 +26,7 @@ select.form-input[multiple] {
     padding-left: 0px;
     padding-right: 0px;
     height: $font-base * 8 - $spacing-increment * 6;
+    border-right-width: 2px;
 }
 
 .form-input-wrapper {
