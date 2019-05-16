@@ -46,7 +46,7 @@ Additionally framework ships with a select set of Vanilla JS modules to augment 
 
 ## Preview
 
-You can see the demo index.html [here](https://cdn.jsdelivr.net/gh/Taxiozaurus/hailstorm@master/)
+Due to Rawgit shutting its doors unfortunately a demo cannot be served at the moment.
 
 ## For Collaborators
 
