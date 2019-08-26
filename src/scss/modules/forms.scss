@@ -91,6 +91,11 @@ input.form-input {
             border-radius: 50%;
         }
     }
+    &[type="number"] {
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
 }
 // Style overrides for special look
 .form-input-wrapper {
@@ -155,4 +160,17 @@ input.form-input {
     &.shaded:hover {
 		box-shadow: $shadow-hover;
 	}
+}
+// Combined input+button
+.form-input-combo {
+    display: grid;
+    grid-template-columns: auto min-content;
+    .form-input {
+        margin: 0;
+        grid-column: span 1;
+    }
+    .button {
+        margin: 0;
+        grid-column: span 1;
+    }
 }
