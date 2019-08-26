@@ -61,7 +61,6 @@ div {
 }
 
 // Import modules
-@import "modules/utils.scss";
 @import "modules/grid.scss";
 @import "modules/typography.scss";
 @import "modules/panel.scss";
@@ -69,3 +68,6 @@ div {
 @import "modules/alert.scss";
 @import "modules/banner.scss";
 @import "modules/forms.scss";
+
+// Utils contain override props so they must be kept last
+@import "modules/utils.scss";
