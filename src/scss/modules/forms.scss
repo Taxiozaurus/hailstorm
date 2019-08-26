@@ -117,3 +117,42 @@ input.form-input {
         transition: background-color .2s;
     }
 }
+// Buttons
+@mixin buttonColor($mixin-color) {
+    background-color: $mixin-color;
+    border-color: darken($mixin-color, 20%);
+    color: $c-main;
+    &:hover {
+        background: darken($mixin-color, 5%);
+    }
+}
+.button {
+    display: inline-block;
+    background: darken($c-main, 10%);
+    color: $c-contrast;
+    font-size: $font-base;
+    padding: $spacing-increment * 2px $spacing-increment * 3px;
+    border: 1px solid $c-default;
+    border-radius: $border-radius;
+    position: relative;
+    cursor: pointer;
+    margin: 0 .2em;
+    &:hover {
+        background: darken($c-main, 15%);
+    }
+    &.info {
+        @include buttonColor($c-accent);
+    }
+    &.success {
+        @include buttonColor($c-success);
+    }
+    &.warning {
+        @include buttonColor($c-warning);
+    }
+    &.danger {
+        @include buttonColor($c-danger);
+    }
+    &.shaded:hover {
+		box-shadow: $shadow-hover;
+	}
+}

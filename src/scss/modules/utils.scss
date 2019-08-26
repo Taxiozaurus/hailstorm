@@ -87,7 +87,8 @@ pre {
 	color: $c-danger ;
 }
 
-div.shaded {
+div.shaded,
+.button.shaded {
 	box-shadow: $shadow;
 	transition: box-shadow .3s ease-in-out;
 
