@@ -9,8 +9,10 @@ CSS
   [W] Forms
     [Y] Inputs + Textboxes
     [Y] Select (single + multiple) box
+      [Y] Select box consistent dropdown
     [Y] Check + Radio inputs
     [ ] Buttons
+      [ ] Input adjacent buttons
   [ ] Progress bars
   [Y] Panels
   [Y] Cards

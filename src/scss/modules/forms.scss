@@ -25,17 +25,29 @@ textarea.form-input {
 }
 // Input specific styles
 select.form-input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    &:not([multiple]) {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' viewBox='0 0 448 512' height='14'><path fill='black' d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'></path></svg>");
+        background-repeat: no-repeat;
+        background-position: right .7em center;
+    }
     &[multiple] {
         padding-left: 0px;
         padding-right: 0px;
         height: $font-base * 8 - $spacing-increment * 6;
         border-right-width: 2px;
+        border-right-width: 1px;
     }
     option {
         padding: 1px * $spacing-increment 3px * $spacing-increment;
         &[disabled] {
             color: $c-default;
         }
+    }
+    optgroup {
+        padding-left: 1em;
     }
 }
 input.form-input {
@@ -85,11 +97,14 @@ input.form-input {
     width: 100%;
     padding: 0px;
     margin: 0px;
-    input.form-input, 
-    select.form-input, 
+    input.form-input,
     textarea.form-input {
         border: none;
         background: none;
+    }
+    select.form-input {
+        border: none;
+        background-color: transparent;
     }
     .form-fancy-input-bar {
         position: absolute;
