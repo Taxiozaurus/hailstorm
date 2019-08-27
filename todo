@@ -11,8 +11,8 @@ CSS
     [Y] Select (single + multiple) box
       [Y] Select box consistent dropdown
     [Y] Check + Radio inputs
-    [W] Buttons
-      [ ] Input adjacent buttons
+    [Y] Buttons
+      [Y] Input adjacent buttons
   [ ] Progress bars
   [Y] Panels
   [Y] Cards

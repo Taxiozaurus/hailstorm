@@ -164,13 +164,36 @@ input.form-input {
 // Combined input+button
 .form-input-combo {
     display: grid;
-    grid-template-columns: auto min-content;
-    .form-input {
+    grid-template-columns: min-content auto min-content;
+    grid-template-areas: "button-left input button-right";
+    .form-input,
+    .form-input-wrapper {
+        grid-area: input;
         margin: 0;
-        grid-column: span 1;
+    }
+    .form-input {
+        &:not(:first-child) {
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-left-width: 0px;
+        }
+        &:not(:last-child) {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-right-width: 0px;
+        }
     }
     .button {
         margin: 0;
-        grid-column: span 1;
+        &.left {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            grid-area: button-left;
+        }
+        &.right {
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            grid-area: button-right;
+        }
     }
 }

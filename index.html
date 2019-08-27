@@ -271,19 +271,64 @@
 						<div class="grid">
 							<div class="col sm-12 pad-15">
 								<h3 class="heading">Inputs with buttons</h3>
+								<p>You can add buttons on both sides of inputs for gapless context buttons or info-labels (like what type of input this is)</p>
 							</div>
 							<div class="col sm-4 pad-15">
 								<div class="form-input-combo">
 									<input class="form-input" type="text" placeholder="Standard input">
-									<button type="button" class="button info">Info</button>
+									<button type="button" class="button info right">ABC</button>
 								</div>
 							</div>
 							<div class="col sm-4 pad-15">
 								<div class="form-input-combo">
-									<input class="form-input form-fancy" type="text" placeholder="Standard input">
-									<button type="button" class="button info">Info</button>
+									<button type="button" class="button info left">-</button>
+									<input class="form-input" type="number" placeholder="Number input">
+									<button type="button" class="button info right">+</button>
 								</div>
 							</div>
+							<div class="col sm-4 pad-15">
+								<div class="form-input-combo">
+									<select class="form-input">
+										<option value="">Default option</option>
+										<option value="1">Option 1</option>
+										<option value="2" disabled>Option 2, disabled</option>
+										<option value="3">Option 3</option>
+										<optgroup>
+											<option value="4">Option group item</option>
+											<option value="5">Option group item</option>
+										</optgroup>
+									</select>
+									<button type="button" class="button info right">OPT</button>
+								</div>
+							</div>
+							<div class="col sm-4 pad-15">
+									<div class="form-input-combo">
+										<input class="form-input form-fancy" type="text" placeholder="Standard input">
+										<button type="button" class="button info right">ABC</button>
+									</div>
+								</div>
+								<div class="col sm-4 pad-15">
+									<div class="form-input-combo">
+										<button type="button" class="button info left">-</button>
+										<input class="form-input form-fancy" type="number" placeholder="Number input">
+										<button type="button" class="button info right">+</button>
+									</div>
+								</div>
+								<div class="col sm-4 pad-15">
+									<div class="form-input-combo">
+										<select class="form-input form-fancy">
+											<option value="">Default option</option>
+											<option value="1">Option 1</option>
+											<option value="2" disabled>Option 2, disabled</option>
+											<option value="3">Option 3</option>
+											<optgroup>
+												<option value="4">Option group item</option>
+												<option value="5">Option group item</option>
+											</optgroup>
+										</select>
+										<button type="button" class="button info right">OPT</button>
+									</div>
+								</div>
 						</div>
 
 					</div>
