@@ -36,6 +36,8 @@ As part of the framework you get the following:
 * Sane typography with zipf spread
 * Variable and calculation based colors
 
+Make sure to check `todo` for progress info.
+
 Additionally framework ships with a select set of Vanilla JS modules to augment your design game.
 
 * Hoverable popups and tooltips
