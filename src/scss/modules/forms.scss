@@ -128,6 +128,7 @@ input.form-input {
     border-color: darken($mixin-color, 20%);
     color: $c-main;
     &:hover {
+        color: $c-main;
         background: darken($mixin-color, 5%);
     }
 }
@@ -144,6 +145,7 @@ input.form-input {
     margin: $spacing-increment * 1px .2em;
     text-decoration: none;
     &:hover {
+        color: $c-contrast;
         background: darken($c-main, 15%);
     }
     &.info {
