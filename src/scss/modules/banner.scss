@@ -11,6 +11,9 @@
 	&.parallax {
 		transform: translateZ(-9px) scale(2);
 	}
+	&.shaded {
+		box-shadow: $shadow-inverted;
+	}
 
 	img {
 		width: 100%;

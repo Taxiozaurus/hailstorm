@@ -1,3 +1,19 @@
+// Mixin for generating any grid size beyond sm
+@mixin gen-grid($size, $width) {
+	@media (min-width: $width) {
+		@for $i from 1 through $grid-columns {
+			&.#{$size}-#{$i} {
+				grid-column: span $i;
+				@for $s from 1 through $grid-columns {
+					&.#{$size}-start-#{$s} {
+						grid-column: $s / span $i;
+					}
+				}
+			}
+		}
+	}
+}
+
 // CSS Grid shortcuts
 .grid {
 	display: grid;
@@ -27,44 +43,16 @@
 			// Mobile grid
 			&.sm-#{$i} {
 				grid-column: span $i;
-			}
-			&.sm-start-#{$i} {
-				grid-column-start: $i;
-			}
-		}
-		@media (min-width: $grid-md-min-width) {
-			// Tablet grid
-			@for $i from 1 through $grid-columns {
-				&.md-#{$i} {
-					grid-column: span $i;
-				}
-				&.md-start-#{$i} {
-					grid-column-start: $i;
+				@for $s from 1 through $grid-columns {
+					&.sm-start-#{$s} {
+						grid-column: $s / span $i;
+					}
 				}
 			}
 		}
-		@media (min-width: $grid-lg-min-width) {
-			// Desktop grid
-			@for $i from 1 through $grid-columns {
-				&.lg-#{$i} {
-					grid-column: span $i;
-				}
-				&.lg-start-#{$i} {
-					grid-column-start: $i;
-				}
-			}
-		}
-		@media (min-width: $grid-xl-min-width) {
-			// Extra large screen grid
-			@for $i from 1 through $grid-columns {
-				&.xl-#{$i} {
-					grid-column: span $i;
-				}
-				&.xl-start-#{$i} {
-					grid-column-start: $i;
-				}
-			}
-		}
+		@include gen-grid("md", $grid-md-min-width);
+		@include gen-grid("lg", $grid-lg-min-width);
+		@include gen-grid("xl", $grid-xl-min-width);
 	}
 }
 

@@ -42,6 +42,21 @@ html, body, .page {
 		}
 	}
 }
+.content-container {
+	width: 100%;
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+	@media (min-width: $grid-md-min-width) {
+		max-width: $grid-md-min-width;
+	}
+	@media (min-width: $grid-lg-min-width) {
+		max-width: $grid-lg-min-width;
+	}
+	@media (min-width: $grid-xl-min-width) {
+		max-width: $grid-lg-min-width;
+	}
+}
 
 div {
 	position: relative;
