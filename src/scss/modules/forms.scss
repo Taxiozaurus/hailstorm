@@ -142,6 +142,7 @@ input.form-input {
     position: relative;
     cursor: pointer;
     margin: $spacing-increment * 1px .2em;
+    text-decoration: none;
     &:hover {
         background: darken($c-main, 15%);
     }
