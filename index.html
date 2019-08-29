@@ -11,18 +11,33 @@
 
 <body>
 	<div class="page">
-		<div class="banner shaded tall parallax">
+		<div class="banner tall parallax">
 			<img src="BANNER - Large.png" alt="Hailstorm CSS Large Banner">
 		</div>
 		
 		<div class="main-grid grid pad-30 bg-page shaded double-shaded">
-			<div class="col sm-12 md-10 md-start-2 lg-8 lg-start-3 xl-6 xl-start-4 tall">
+			<div class="col sm-12 lg-10 lg-start-2 xl-8 xl-start-3 tall">
 				<div class="optional-content-container">
 					<h1 class="heading">Hailstorm Demo HTML</h1>
 
 					<div class="panel">
 						<div class="panel-heading">Panel Heading</div>
-						<div class="panel-body">Panel contents. Lorem ipsum dolor sit amet....<br>
+						<div class="panel-body">
+							
+							<h2 class="heading">Typography</h2>
+
+							<h1>Heading 1</h1>
+							<h2>Heading 2</h2>
+							<h2 class="shaded">Heading 2 Shaded</h2>
+							<h2 class="shaded inverted">Heading 2 Shaded Inverted</h2>
+							<h3>Heading 3</h3>
+							<h4>Heading 4</h4>
+							<h5>Heading 5</h5>
+							<p>Paragraph</p>
+							<small>Small</small>
+
+							<pre>And this is a preformatted monospace block.</pre>
+
 							<h2 class="heading">Info cards</h2>
 							<div class="grid">
 								<div class="card flexible hover col sm-12 md-6 lg-4">
@@ -79,24 +94,28 @@
 										Im vimvil faber auber dolor sit ismal. Qum aurom estas potestas im lux mo devar vis er tal.
 									</div>
 								</div>
+								<div class="col sm-12 pad-15">
+									<p>
+										Cards work without JS and allow for different interaction triggers with classes <code>.hover</code> <code>.tap</code> <code>.open</code>.
+									</p>
+									<p>
+										Additionally for floating width cards you can use class <code>.flexible</code> when width is configured by the grid or other elements.<br>
+									</p>
+<pre>&lt;div class="card" tabindex="0"&gt;
+	&lt;div class="card-image"&gt;
+		&lt;img src=""&gt;
+	&lt;/div&gt;
+	&lt;div class="card-title"&gt;
+		Title
+	&lt;/div&gt;
+	&lt;div class="card-content"&gt;
+		Content
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+								</div>
 							</div>
 
-							<h2 class="heading">Typography</h2>
-
-							<h1>Heading 1</h1>
-							<h2>Heading 2</h2>
-							<h2 class="shaded">Heading 2 Shaded</h2>
-							<h2 class="shaded inverted">Heading 2 Shaded Inverted</h2>
-							<h3>Heading 3</h3>
-							<h4>Heading 4</h4>
-							<h5>Heading 5</h5>
-							<p>Paragraph</p>
-							<small>Small</small>
-
-							<pre>And this is a preformatted monospace block.</pre>
-
 							<h2 class="heading">Alerts</h2>
-
 							<div class="grid">
 								<div class="col sm-12 md-6 pad-15">
 									<div class="alert">
@@ -141,6 +160,19 @@
 										A dangerous alert with a drop shadow
 									</div>
 								</div>
+								<div class="col sm-12 pad-15">
+									<p>
+										Alerts can be used for various information displays anywhere on a page, an alert dispetcher module for JS is currently in the works.
+									</p>
+									<p>
+										Colours are configured through classes <code>.info</code> <code>.success</code> <code>.warning</code> <code>.danger</code> or can be left by default with backdrop shadow added through <code>.shaded</code> class.<br>
+									</p>
+<pre>
+&lt;div class="alert"&gt;
+	&lt;span class="dismiss-btn" dismiss&gt;&amp;times;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+								</div>
 							</div>
 
 							<h2 class="heading">Forms</h2>
@@ -149,16 +181,16 @@
 								<div class="col sm-12 pad-15">
 									<h3 class="heading">Standard inputs</h3>
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<input class="form-input" type="text" placeholder="Standard input">
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<input class="form-input" type="email" placeholder="Email input">
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<input class="form-input" type="number" placeholder="Number input">
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<select class="form-input">
 										<option value="">Default option</option>
 										<option value="1">Option 1</option>
@@ -170,7 +202,7 @@
 										</optgroup>
 									</select>
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<select class="form-input" multiple>
 										<option value="">Default option</option>
 										<option value="1">Option 1</option>
@@ -182,7 +214,7 @@
 										</optgroup>
 									</select>
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<label>
 										<input class="form-input" type="checkbox" value="1" name="test-checkbox"> A Checkbox
 									</label>
@@ -194,22 +226,30 @@
 								<div class="col sm-12 pad-15">
 									<textarea class="form-input" placeholder="Standard textarea"></textarea>
 								</div>
+								<div class="col sm-12 pad-15">
+									<p>
+										All form input types are supported and made uniform using one class <code>.form-input</code>.
+									</p>
+									<p>
+										Any <code>input</code>, <code>select</code> and <code>textarea</code> element with this class will be made fit to width of its parent as well as given uniform flat look.
+									</p>
+								</div>
 							</div>
 
 							<div class="grid">
 								<div class="col sm-12 pad-15">
 									<h3 class="heading">Fancy inputs</h3>
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<input class="form-input form-fancy" type="text" placeholder="Fancy input">
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<input class="form-input form-fancy" type="email" placeholder="Email input">
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<input class="form-input form-fancy" type="number" placeholder="Number input">
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<select class="form-input form-fancy">
 										<option value="">Default option</option>
 										<option value="1">Option 1</option>
@@ -221,7 +261,7 @@
 										</optgroup>
 									</select>
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<select class="form-input form-fancy" multiple>
 										<option value="">Default option</option>
 										<option value="1">Option 1</option>
@@ -233,7 +273,7 @@
 										</optgroup>
 									</select>
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<label>
 										<input class="form-input form-fancy" type="checkbox" value="1" name="test-checkbox"> A Checkbox
 									</label>
@@ -245,26 +285,42 @@
 								<div class="col sm-12 pad-15">
 									<textarea class="form-input form-fancy" placeholder="Standard textarea"></textarea>
 								</div>
+								<div class="col sm-12 pad-15">
+									<p>
+										This is an extension to standard forms and any form element can be made into a "fancy" one using <code>.form-fancy</code> class.
+									</p>
+									<p>
+										However conversion is done via JS on page load thus unsupported clients will fall back to regular style.
+									</p>
+								</div>
 							</div>
 
 							<div class="grid">
 								<div class="col sm-12 pad-15">
 									<h3 class="heading">Buttons</h3>
-									<p>You can use both <strong>a</strong> and <strong>button</strong> elements for buttons, note however that buttons must have type property of a button.</p>
 								</div>
-								<div class="col sm-6 pad-15">
+								<div class="col sm-12 md-6 pad-15">
 									<button type="button" class="button">Default</button>
 									<button type="button" class="button info">Info</button>
 									<button type="button" class="button success">Success</button>
 									<button type="button" class="button warning">Warning</button>
 									<button type="button" class="button danger">Error</button>
 								</div>
-								<div class="col sm-6 pad-15">
+								<div class="col sm-12 md-6 pad-15">
 									<button type="button" class="shaded button">Default</button>
 									<button type="button" class="shaded button info">Info</button>
 									<button type="button" class="shaded button success">Success</button>
 									<button type="button" class="shaded button warning">Warning</button>
 									<button type="button" class="shaded button danger">Error</button>
+								</div>
+								<div class="col sm-12 pad-15">
+										<p>
+											You can use both <strong>a</strong> and <strong>button</strong> elements for buttons, note however that buttons must have type property of a button.
+										</p>
+										<p>
+											All same colouring calsses are supported as with alerts, namely <code>.info</code> <code>.success</code> <code>.warning</code> and <code>.danger</code>.
+										</p>
+										<pre>&lt;a class="button"&gt;Button&lt;/a&gt;</pre>
 								</div>
 							</div>
 
@@ -273,20 +329,20 @@
 									<h3 class="heading">Inputs with buttons</h3>
 									<p>You can add buttons on both sides of inputs for gapless context buttons or info-labels (like what type of input this is)</p>
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<div class="form-input-combo">
 										<input class="form-input" type="text" placeholder="Standard input">
 										<button type="button" class="button info right">ABC</button>
 									</div>
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<div class="form-input-combo">
 										<button type="button" class="button info left">-</button>
 										<input class="form-input" type="number" placeholder="Number input">
 										<button type="button" class="button info right">+</button>
 									</div>
 								</div>
-								<div class="col sm-4 pad-15">
+								<div class="col sm-6 md-4 pad-15">
 									<div class="form-input-combo">
 										<select class="form-input">
 											<option value="">Default option</option>
@@ -301,34 +357,52 @@
 										<button type="button" class="button info right">OPT</button>
 									</div>
 								</div>
-								<div class="col sm-4 pad-15">
-										<div class="form-input-combo">
-											<input class="form-input form-fancy" type="text" placeholder="Standard input">
-											<button type="button" class="button info right">ABC</button>
-										</div>
+								<div class="col sm-6 md-4 pad-15">
+									<div class="form-input-combo">
+										<input class="form-input form-fancy" type="text" placeholder="Standard input">
+										<button type="button" class="button info right">ABC</button>
 									</div>
-									<div class="col sm-4 pad-15">
-										<div class="form-input-combo">
-											<button type="button" class="button info left">-</button>
-											<input class="form-input form-fancy" type="number" placeholder="Number input">
-											<button type="button" class="button info right">+</button>
-										</div>
+								</div>
+								<div class="col sm-6 md-4 pad-15">
+									<div class="form-input-combo">
+										<button type="button" class="button info left">-</button>
+										<input class="form-input form-fancy" type="number" placeholder="Number input">
+										<button type="button" class="button info right">+</button>
 									</div>
-									<div class="col sm-4 pad-15">
-										<div class="form-input-combo">
-											<select class="form-input form-fancy">
-												<option value="">Default option</option>
-												<option value="1">Option 1</option>
-												<option value="2" disabled>Option 2, disabled</option>
-												<option value="3">Option 3</option>
-												<optgroup>
-													<option value="4">Option group item</option>
-													<option value="5">Option group item</option>
-												</optgroup>
-											</select>
-											<button type="button" class="button info right">OPT</button>
-										</div>
+								</div>
+								<div class="col sm-6 md-4 pad-15">
+									<div class="form-input-combo">
+										<select class="form-input form-fancy">
+											<option value="">Default option</option>
+											<option value="1">Option 1</option>
+											<option value="2" disabled>Option 2, disabled</option>
+											<option value="3">Option 3</option>
+											<optgroup>
+												<option value="4">Option group item</option>
+												<option value="5">Option group item</option>
+											</optgroup>
+										</select>
+										<button type="button" class="button info right">OPT</button>
 									</div>
+								</div>
+								<div class="col sm-12 pad-15">
+									<p>
+										Keeping up with supporting all form elements are buttons on both sides adjacent to the inputs.
+									</p>
+									<p>
+										A class <code>.left</code> should be added if your button should be on the left and <code>.right</code> for the right side.
+									</p>
+									<p>
+										Note however that only one button per side is currently supported.
+									</p>
+<pre>
+&lt;div class="form-input-combo"&gt;
+	&lt;a class="button left"&gt;ABC&lt;/a&gt;
+	&lt;input class="form-input"&gt;
+	&lt;a class="button right"&gt;ABC&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+								</div>
 							</div>
 
 						</div>
