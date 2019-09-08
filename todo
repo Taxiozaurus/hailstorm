@@ -13,6 +13,7 @@ CSS
     [Y] Check + Radio inputs
     [Y] Buttons
       [Y] Input adjacent buttons
+  [ ] Datepicker?
   [ ] Progress bars
   [Y] Panels
   [Y] Cards
@@ -23,7 +24,7 @@ CSS
   [ ] Pagination
   [ ] Breadcrumbs
   [ ] Navigation
-  [ ] Tables
+  [W] Tables
 [ ] Sane typography with zipf spread
 [ ] Variable and calculation based colors
 
