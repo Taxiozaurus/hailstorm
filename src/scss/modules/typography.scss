@@ -31,3 +31,8 @@ p {
 small, sub, sup {
 	font-size: $font-base / 1.5;
 }
+blockquote {
+	border-left: $spacing-increment * 1px solid darken($c-main, 5%);
+	padding: $spacing-increment * 3px $spacing-increment * 4px;
+	background-color: $c-main;
+}
