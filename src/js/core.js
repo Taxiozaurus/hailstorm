@@ -94,8 +94,8 @@ window.Hailstorm = new function() {
 		if (_type.length > 0) alert.classList.add(_type);
 		if (_shaded) alert.classList.add("shaded");
 
-		alert.appendChild(dismissBtn)
-			.appendChild(document.createTextNode(content));
+		alert.appendChild(dismissBtn);
+		alert.appendChild(document.createTextNode(content));
 		
 		return alert;
 	}
