@@ -86,7 +86,7 @@ window.Hailstorm = new function() {
 
 		var dismissBtn = document.createElement('span');
 		dismissBtn.classList.add("dismiss-btn");
-		dismissBtn.setAttribute("dismiss");
+		dismissBtn.setAttribute("dismiss", true);
 		dismissBtn.innerHTML("&times;");
 
 		var alert = document.createElement('div');
