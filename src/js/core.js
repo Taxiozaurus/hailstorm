@@ -31,7 +31,10 @@ window.Hailstorm = new function() {
 
 	/**
 	 * Run dismissal animation and remove the element
-	 * @param {Element} elem
+	 * 
+	 * @param  {Element} elem
+	 * 
+	 * @return {Boolean}
 	 */
 	function _dismissElement(elem) {
 		var root = elem.closest('.alert');
@@ -68,9 +71,38 @@ window.Hailstorm = new function() {
 		});
 	}
 
+	/**
+	 * Alert element generator function
+	 * 
+	 * @param  {String}  type    type of alert to make: "default" "info" "success" "warning" "danger"
+	 * @param  {String}  content text content of alert
+	 * @param  {Boolean} shaded
+	 * 
+	 * @return {Element}
+	 */
+	function _genAlert(type, content, shaded) {
+		var _type = (type in ["dedault", "info", "success", "warning", "danger"]) ? type : "";
+		var _shaded = shaded || false;
+
+		var dismissBtn = document.createElement('span');
+		dismissBtn.classList.add("dismiss-btn");
+		dismissBtn.setAttribute("dismiss");
+		dismissBtn.innerHTML("&times;");
+
+		var alert = document.createElement('div');
+		alert.classList.add("alert", _type, (_shaded ? "shaded" : ""));
+
+		alert.appendChild(dismissBtn)
+			.appendChild(document.createTextNode(content));
+		
+		return alert;
+	}
+
 	this.init = function() {
 		_init()
 	};
+
+	this.generateAlert = _genAlert;
 };
 
 /**
