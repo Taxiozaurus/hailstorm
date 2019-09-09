@@ -411,12 +411,20 @@
 										Included with hailstorm are flexible grids with a variety of styles for better readability.
 									</p>
 								</div>
-								<div class="col sm-12 md-6">
-									<h3>Regular</h3>
-									<table class="table">
+								<div class="col sm-12 md-6 pad-15">
+									<p>You can see in an example a table with all styles applied.</p>
+									<p>Namely <code>.striped</code> for row-to-row highlighting, <code>.flexible</code> to fill width of container and <code>.hover</code> for highlighting individual rows when hovering.</p>
+<pre>
+&lt;table class="table striped flexible hover"&gt;...&lt;/table&gt;
+</pre>
+								</div>
+								<div class="col sm-12 md-6 pad-15">
+									<table class="table striped flexible hover">
 										<thead>
-											<th>#</th>
-											<th>Title</th>
+											<tr>
+												<th>#</th>
+												<th>Title</th>
+											</tr>
 										</thead>
 										<tbody>
 											<tr>
@@ -433,8 +441,10 @@
 											</tr>
 										</tbody>
 										<tfoot>
-											<th>#</th>
-											<th>Title</th>
+											<tr>
+												<th>#</th>
+												<th>Title</th>
+											</tr>
 										</tfoot>
 									</table>
 								</div>
