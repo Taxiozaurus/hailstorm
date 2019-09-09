@@ -200,3 +200,8 @@ input.form-input {
         }
     }
 }
+label.form-label {
+    padding: $spacing-increment * 1px;
+    font-weight: bold;
+    line-height: 1.5em;
+}
