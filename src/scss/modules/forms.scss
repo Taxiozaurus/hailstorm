@@ -201,7 +201,7 @@ input.form-input {
     }
 }
 label.form-label {
-    padding: $spacing-increment * 1px;
-    font-weight: bold;
+    padding: $spacing-increment * 2px 0px;
     line-height: 1.5em;
+    display: inline-block;
 }
