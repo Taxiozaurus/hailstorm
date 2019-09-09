@@ -81,7 +81,7 @@ window.Hailstorm = new function() {
 	 * @return {Element}
 	 */
 	function _genAlert(type, content, shaded) {
-		var _type = (type in ["dedault", "info", "success", "warning", "danger"]) ? type : "";
+		var _type = (["dedault", "info", "success", "warning", "danger"].indexOf(type) > -1) ? type : "";
 		var _shaded = shaded || false;
 
 		var dismissBtn = document.createElement('span');
