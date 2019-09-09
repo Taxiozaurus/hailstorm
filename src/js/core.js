@@ -90,7 +90,9 @@ window.Hailstorm = new function() {
 		dismissBtn.innerHTML = "&times;";
 
 		var alert = document.createElement('div');
-		alert.classList.add("alert", _type, (_shaded ? "shaded" : ""));
+		alert.classList.add("alert");
+		if (_type.length > 0) alert.classList.add(_type);
+		if (_shaded) alert.classList.add("shaded");
 
 		alert.appendChild(dismissBtn)
 			.appendChild(document.createTextNode(content));
