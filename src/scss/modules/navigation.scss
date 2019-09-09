@@ -1,0 +1,60 @@
+.nav {
+	width: 100%;
+	clear: both;
+	ol, ul {
+		width: 100;
+		// Font size 0 is used to remove unwanted spacing between inline-block elements due to whitespace
+		font-size: 0px;
+	}
+	li {
+		font-size: $font-base;
+		list-style: none;
+		display: inline-block;
+		padding: 0px;
+		margin: 0px;
+		text-align: center;
+		color: $c-contrast;
+		position: relative;
+		&:not(:last-child) {
+			&:after {
+				position: absolute;
+				right: 0px;
+				top: 20%;
+				height: 60%;
+				content: "";
+				border-right: 1px solid $c-default;
+			}
+		}
+		&.active {
+			font-weight: bold;
+		}
+		& > a {
+			color: $c-contrast;
+			display: inline-block;
+			text-decoration: none;
+			width: 100%;
+			padding: $spacing-increment * 3px $spacing-increment * 4px;
+			transition: background-color .2s;
+			&:hover {
+				background-color: darken($c-main, 5%);
+			}
+		}
+	}
+	&.inverted {
+		background-color: $c-contrast;
+		li, li a {
+			color: $c-main;
+		}
+		li a:hover {
+			background-color: lighten($c-contrast, 5%);
+		}
+	}
+	&.sticky {
+		display: sticky;
+	}
+	&.floating {
+		display: absolute;
+		top: 0;
+		left: 0;
+	}
+}
