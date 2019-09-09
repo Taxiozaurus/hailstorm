@@ -35,4 +35,19 @@ blockquote {
 	border-left: $spacing-increment * 1px solid darken($c-main, 5%);
 	padding: $spacing-increment * 3px $spacing-increment * 4px;
 	background-color: $c-main;
+	color: $c-contrast;
+	.source {
+		width: auto;
+		margin-left: 60px;
+		color: $c-default;
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -30px;
+			width: 20px;
+			border-bottom: 1px solid $c-default;
+		}
+	}
 }
