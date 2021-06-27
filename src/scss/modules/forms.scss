@@ -22,6 +22,18 @@ textarea.form-input {
             background-color: $c-danger;
         }
     }
+    &.form-fancy {
+        &:not([type="radio"]),
+        &:not([type="checkbox"]) {
+            border: none;
+            background: none;
+            border-bottom: 2px solid $c-default;
+            transition: border-color .2s;
+            &:focus {
+                border-bottom-color: $c-accent;
+            }
+        }
+    }
 }
 // Input specific styles
 select.form-input {
@@ -95,31 +107,6 @@ input.form-input {
         -webkit-appearance: textfield;
         -moz-appearance: textfield;
         appearance: textfield;
-    }
-}
-// Style overrides for special look
-.form-input-wrapper {
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-    input.form-input,
-    textarea.form-input {
-        border: none;
-        background: none;
-    }
-    select.form-input {
-        border: none;
-        background-color: transparent;
-    }
-    .form-fancy-input-bar {
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        display: inline-block;
-        width: 100%;
-        background-color: $c-default;
-        height: 2px;
-        transition: background-color .2s;
     }
 }
 // Buttons
