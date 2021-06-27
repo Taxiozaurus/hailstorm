@@ -50,7 +50,9 @@
 		}
 	}
 	&.sticky {
-		display: sticky;
+		position: sticky;
+		z-index: 2;
+		top: 0;
 	}
 	&.floating {
 		display: absolute;
