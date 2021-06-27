@@ -1,7 +1,7 @@
 a {
-	color: $c-accent;
+	color: $c-info;
 	text-decoration: none;
 	&:hover {
-		color: darken($c-accent, 20%);
+		color: darken($c-info, 20%);
 	}
 }

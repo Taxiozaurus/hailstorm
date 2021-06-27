@@ -13,8 +13,8 @@
 	cursor: default;
 
 	&.info {
-		border-color: $c-accent;
-		color: darken($c-accent, 30%);
+		border-color: $c-info;
+		color: darken($c-info, 30%);
 	}
 	&.success {
 		border-color: $c-success;

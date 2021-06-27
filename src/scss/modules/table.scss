@@ -1,3 +1,14 @@
+@mixin tableHoverColor($dataColor, $dataBgColor) {
+    thead, tfoot, tr {
+        &:hover {
+            td, th {
+                color: $dataColor;
+                background-color: $dataBgColor;
+            }
+        }
+    }
+}
+
 .table,
 .table td,
 .table tr {
@@ -11,6 +22,7 @@
     border-collapse: collapse;
     border-radius: $border-radius;
     td, th {
+        cursor: pointer;
         text-align: left;
         padding: $spacing-increment * 1px $spacing-increment * 2px;
     }
@@ -62,14 +74,19 @@
         min-width: 100%;
         max-width: 100%;
     }
-    &.hover {
-        thead, tfoot, tr {
-            &:hover {
-                td, th {
-                    cursor: pointer;
-                    background-color: darken($c-main, 10%);
-                }
+    @for $i from 1 through 10 {
+        &.pad-#{$i} {
+            padding: 0;
+            tr, td {
+                padding: #{$spacing-increment * $i}px;
             }
         }
+    }
+    &.hover {
+        @include tableHoverColor($c-contrast, darken($c-main, 5%));
+        &.info { @include tableHoverColor($c-main, $c-info); }
+        &.success { @include tableHoverColor($c-main, $c-success); }
+        &.warning { @include tableHoverColor($c-main, $c-warning); }
+        &.danger { @include tableHoverColor($c-main, $c-danger); }
     }
 }

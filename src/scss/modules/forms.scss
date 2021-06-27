@@ -11,9 +11,9 @@ textarea.form-input {
     display: block;
     transition: border-color .2s;
     &:focus {
-        border-color: $c-accent;
+        border-color: $c-info;
         & + .form-fancy-input-bar {
-            background-color: $c-accent;
+            background-color: $c-info;
         }
     }
     &:not(:valid) {
@@ -30,7 +30,7 @@ textarea.form-input {
             border-bottom: 2px solid $c-default;
             transition: border-color .2s;
             &:focus {
-                border-bottom-color: $c-accent;
+                border-bottom-color: $c-info;
             }
         }
     }
@@ -136,7 +136,7 @@ input.form-input {
         background: darken($c-main, 15%);
     }
     &.info {
-        @include buttonColor($c-accent);
+        @include buttonColor($c-info);
     }
     &.success {
         @include buttonColor($c-success);
