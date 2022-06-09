@@ -2,8 +2,8 @@
     thead, tfoot, tr {
         &:hover {
             td, th {
-                color: $dataColor;
-                background-color: $dataBgColor;
+                color: var(#{'--c-' + $dataColor});
+                background-color: var(#{'--c-' + $dataBgColor});
             }
         }
     }
@@ -15,7 +15,7 @@
     margin: 0px;
     padding: 0px;
     border: none;
-    color: $c-contrast;
+    color: var(--c-contrast);
 }
 .table {
     border-spacing: 0px;
@@ -28,7 +28,7 @@
     }
     tbody {
         td {
-            border-bottom: 1px solid lighten($c-contrast, 50%);
+            border-bottom: 1px solid var(--c-border-base);
         }
         tr:last-child td {
             border-bottom: none;
@@ -41,7 +41,7 @@
     }
     thead {
         td, th {
-            border-bottom: 1px solid $c-contrast;
+            border-bottom: 1px solid var(--c-contrast);
             &:first-child {
                 border-top-left-radius: $border-radius;
             }
@@ -52,7 +52,7 @@
     }
     tfoot {
         td, th {
-            border-top: 1px solid $c-contrast;
+            border-top: 1px solid var(--c-contrast);
             &:first-child {
                 border-bottom-left-radius: $border-radius;
             }
@@ -63,10 +63,10 @@
     }
     &.striped {
         tr:nth-child(even) td {
-            background-color: $c-p-background;
+            background-color: var(--c-p-background);
         }
         tr:nth-child(odd) td {
-            background-color: $c-main;
+            background-color: var(--c-main);
         }
     }
     &.flexible {
@@ -83,10 +83,10 @@
         }
     }
     &.hover {
-        @include tableHoverColor($c-contrast, darken($c-main, 5%));
-        &.info { @include tableHoverColor($c-main, $c-info); }
-        &.success { @include tableHoverColor($c-main, $c-success); }
-        &.warning { @include tableHoverColor($c-main, $c-warning); }
-        &.danger { @include tableHoverColor($c-main, $c-danger); }
+        @include tableHoverColor("contrast", "main-hov");
+        &.info { @include tableHoverColor("main", "info"); }
+        &.success { @include tableHoverColor("main", "success"); }
+        &.warning { @include tableHoverColor("main", "warning"); }
+        &.danger { @include tableHoverColor("main", "danger"); }
     }
 }

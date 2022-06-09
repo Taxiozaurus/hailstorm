@@ -20,9 +20,9 @@
 }
 
 pre, code {
-	background-color: $c-main;
-	border: 1px solid darken($c-main, 20%);
-	color: $c-contrast;
+	background-color: var(--c-main);
+	border: 1px solid var(--c-main-hov);
+	color: var(--c-contrast);
 	padding: #{$spacing-increment * 2}px;
 	margin: #{$spacing-increment * 2}px 0;
 	tab-size: 4;
@@ -44,53 +44,53 @@ code {
 }
 
 .bg-page {
-	background-color: $c-p-background ;
+	background-color: var(--c-p-background);
 }
 .bg-main {
-	background-color: $c-main ;
+	background-color: var(--c-main);
 }
 .bg-default {
-	background-color: $c-default ;
+	background-color: var(--c-default);
 }
 .bg-contrast {
-	background-color: $c-contrast ;
+	background-color: var(--c-contrast);
 }
 .bg-accent {
-	background-color: $c-info ;
+	background-color: var(--c-info);
 }
 .bg-success {
-	background-color: $c-success ;
+	background-color: var(--c-success);
 }
 .bg-warning {
-	background-color: $c-warning ;
+	background-color: var(--c-warning);
 }
 .bg-danger {
-	background-color: $c-danger ;
+	background-color: var(--c-danger);
 }
 
 .c-page {
-	color: $c-p-background ;
+	color: var(--c-p-background);
 }
 .c-main {
-	color: $c-main ;
+	color: var(--c-main);
 }
 .c-default {
-	color: $c-default ;
+	color: var(--c-default);
 }
 .c-contrast {
-	color: $c-contrast ;
+	color: var(--c-contrast);
 }
 .c-info {
-	color: $c-info ;
+	color: var(--c-info);
 }
 .c-success {
-	color: $c-success ;
+	color: var(--c-success);
 }
 .c-warning {
-	color: $c-warning ;
+	color: var(--c-warning);
 }
 .c-danger {
-	color: $c-danger ;
+	color: var(--c-danger);
 }
 
 div.shaded,

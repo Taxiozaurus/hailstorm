@@ -7,7 +7,7 @@
 	box-sizing: border-box;
 	margin: 0px;
 	padding: 0px;
-	color: $c-contrast;
+	color: var(--c-contrast);
 	font-size: $font-base;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	z-index: 1;
@@ -20,7 +20,7 @@
 html, body, .page {
 	min-height: 100%;
 	min-height: 100vh;
-	background-color: $c-p-background;
+	background-color: var(--c-p-background);
 }
 
 .page {
@@ -66,13 +66,13 @@ div {
 	width: 10px;
 }
 ::-webkit-scrollbar-track {
-	background: $c-main;
+	background: var(--c-main);
 }
 ::-webkit-scrollbar-thumb {
-	background: $c-default;
+	background: var(--c-default);
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: $c-contrast;
+	background: var(--c-contrast);
 }
 
 // Import modules

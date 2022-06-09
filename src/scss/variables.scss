@@ -19,7 +19,9 @@ $font-base: 16px;
 
 // Colors
 $c-p-background: #fff;
+$c-d-background: #373740;
 $c-main: #fafafa;
+$c-light: #fafafa;
 $c-default: #aaa;
 $c-contrast: #333;
 $c-info: #31acff;
@@ -32,13 +34,71 @@ $c-shadow-less: rgba(0,0,0,0.2);
 
 // Style presets
 @function gen-shadow($size, $color) {
-	@return 0px #{$size}px #{$size*2}px #{$size*0.5}px $color;
+	@return 0px #{$size}px #{$size*2}px #{$size*0.5}px var(#{$color});
 }
 
-$shadow: gen-shadow($spacing-increment, $c-shadow);
-$shadow-hover: gen-shadow($spacing-increment, $c-shadow-intense);
-$shadow-inverted: gen-shadow($spacing-increment, $c-shadow-less);
+$shadow: gen-shadow($spacing-increment, "--c-shadow");
+$shadow-hover: gen-shadow($spacing-increment, "--c-shadow-intense");
+$shadow-inverted: gen-shadow($spacing-increment, "--c-shadow-less");
 
-$shadow-double: gen-shadow($spacing-increment * 2, $c-shadow);
-$shadow-double-hover: gen-shadow($spacing-increment * 2, $c-shadow-intense);
-$shadow-double-inverted: gen-shadow($spacing-increment * 2, $c-shadow-less);
+$shadow-double: gen-shadow($spacing-increment * 2, "--c-shadow");
+$shadow-double-hover: gen-shadow($spacing-increment * 2, "--c-shadow-intense");
+$shadow-double-inverted: gen-shadow($spacing-increment * 2, "--c-shadow-less");
+
+// Apply colors to CSS variables and enable dark mode variant
+:root {
+	--c-p-background: #{$c-p-background};
+	
+	--c-main: #{$c-main};
+	--c-main-alt: #{lighten($c-main, 5%)};
+	--c-main-hov: #{darken($c-main, 5%)};
+
+	--c-light: #{$c-light};
+	
+	--c-default: #{$c-default};
+	--c-default-alt: #{darken($c-default, 10%)};
+	
+	--c-contrast: #{$c-contrast};
+	--c-contrast-alt: #{lighten($c-contrast, 5%)};
+
+	--c-border-base: #{lighten($c-contrast, 50%)};
+	
+	--c-info: #{$c-info};
+	--c-info-alt: #{darken($c-info, 30%)};
+	--c-info-hov: #{darken($c-info, 5%)};
+
+	--c-success: #{$c-success};
+	--c-success-alt: #{darken($c-success, 30%)};
+	--c-success-hov: #{darken($c-success, 5%)};
+	
+	--c-warning: #{$c-warning};
+	--c-warning-alt: #{darken($c-warning, 30%)};
+	--c-warning-hov: #{darken($c-warning, 5%)};
+	
+	--c-danger: #{$c-danger};
+	--c-danger-alt: #{darken($c-danger, 30%)};
+	--c-danger-hov: #{darken($c-danger, 5%)};
+	
+	--c-shadow: #{$c-shadow};
+	--c-shadow-intense: #{$c-shadow-intense};
+	--c-shadow-less: #{$c-shadow-less};
+}
+html.dark {
+	--c-p-background: #{$c-d-background};
+
+	--c-main: #{$c-contrast};
+	--c-main-alt: #{lighten($c-contrast, 5%)};
+	--c-main-hov: #{lighten($c-contrast, 10%)};
+	
+	--c-default: #{$c-d-background};
+	--c-default-alt: #{lighten($c-d-background, 10%)};
+	
+	--c-contrast: #{$c-main};
+	--c-contrast-alt: #{darken($c-main, 5%)};
+	
+	--c-border-base: #{darken($c-main, 50%)};
+
+	--c-shadow: rgba(255,255,255,0.3);
+	--c-shadow-intense: rgba(255,255,255,0.4);
+	--c-shadow-less: rgba(255,255,255,0.2);
+}

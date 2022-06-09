@@ -28,10 +28,10 @@
 		text-align: center;
 
 		&.main {
-			color: $c-main;
+			color: var(--c-main);
 		}
 		&.contrast {
-			color: $c-contrast;
+			color: var(--c-contrast);
 		}
 
 		.heading {
@@ -43,12 +43,12 @@
 	}
 
 	@media (min-width: $grid-md-min-width) {
-		min-height: 420px;
+		min-height: calc($grid-md-min-width * 2/3);
 	}
 	@media (min-width: $grid-lg-min-width) {
-		min-height: 520px;
+		min-height: calc($grid-lg-min-width / 2);
 	}
 	@media (min-width: $grid-xl-min-width) {
-		min-height: 620px;
+		min-height: calc($grid-xl-min-width / 2);
 	}
 }

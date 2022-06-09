@@ -1,7 +1,7 @@
 a {
-	color: $c-info;
+	color: var(--c-info);
 	text-decoration: none;
 	&:hover {
-		color: darken($c-info, 20%);
+		color: var(--c-info-alt);
 	}
 }

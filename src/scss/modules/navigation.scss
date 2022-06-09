@@ -13,7 +13,7 @@
 		padding: 0px;
 		margin: 0px;
 		text-align: center;
-		color: $c-contrast;
+		color: var(--c-contrast);
 		position: relative;
 		&:not(:last-child) {
 			&:after {
@@ -22,31 +22,31 @@
 				top: 20%;
 				height: 60%;
 				content: "";
-				border-right: 1px solid $c-default;
+				border-right: 1px solid var(--c-default);
 			}
 		}
 		&.active {
 			font-weight: bold;
 		}
 		& > a {
-			color: $c-contrast;
+			color: var(--c-contrast);
 			display: inline-block;
 			text-decoration: none;
 			width: 100%;
 			padding: $spacing-increment * 3px $spacing-increment * 4px;
 			transition: background-color .2s;
 			&:hover {
-				background-color: darken($c-main, 5%);
+				background-color: var(--c-main-alt);
 			}
 		}
 	}
 	&.inverted {
-		background-color: $c-contrast;
+		background-color: var(--c-contrast);
 		li, li a {
-			color: $c-main;
+			color: var(--c-main);
 		}
 		li a:hover {
-			background-color: lighten($c-contrast, 5%);
+			background-color: var(--c-contrast-alt);
 		}
 	}
 	&.sticky {

@@ -23,6 +23,9 @@ window.Hailstorm = new function() {
 			if(event.target.hasAttribute('dismiss')) {
 				_dismissElement(event.target);
 			}
+			if(event.target.hasAttribute('dark-toggle')) {
+				_toggleDarkMode();
+			}
 		});
 	}
 
@@ -43,6 +46,14 @@ window.Hailstorm = new function() {
 			root.remove();
 		}, 700);
 		return true;
+	}
+
+	/**
+	 * Toggle dark class on page root
+	 * @returns {Boolean}
+	 */
+	function _toggleDarkMode() {
+		console.log(document.documentElement.classList.toggle('dark'));
 	}
 
 

@@ -14,7 +14,7 @@
 	&:after {
 		content: '';
 		text-align: center;
-		color: $c-contrast;
+		color: var(--c-contrast);
 		display: inline-block;
 		background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
 		position: absolute;
@@ -64,7 +64,7 @@
 		height: 150px;
 		overflow: hidden;
 		text-align: center;
-		background-color: $c-main;
+		background-color: var(--c-main);
 		margin-bottom: 0;
 		transition: margin-top .3s ease-in-out;
 
@@ -79,8 +79,8 @@
 		height: auto;
 		display: block;
 		font-size: $font-base;
-		background-color: $c-contrast;
-		color: $c-main;
+		background-color: var(--c-contrast);
+		color: var(--c-main);
 		padding: #{$spacing-increment * 3}px #{$spacing-increment * 2}px;
 		margin: 0 -#{$spacing-increment}px;
 		transition: padding-top .3s ease-in-out,
@@ -93,8 +93,8 @@
 		height: auto;
 		min-height: 100%;
 		overflow: hidden;
-		background-color: $c-p-background;
-		color: $c-contrast;
+		background-color: var(--c-p-background);
+		color: var(--c-contrast);
 		padding: #{$spacing-increment * 2}px;
 		margin: -#{$spacing-increment}px;
 		margin-top: 0;

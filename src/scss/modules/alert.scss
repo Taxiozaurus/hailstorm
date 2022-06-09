@@ -4,8 +4,8 @@
 	padding: #{$spacing-increment * 3}px;
 	padding-right: #{$spacing-increment * 6}px;
 	margin: #{$spacing-increment * 2}px 0;
-	background-color: lighten($c-main, 5%);
-	border: 1px solid darken($c-default, 10%);
+	background-color: var(--c-main-alt);
+	border: 1px solid var(--c-default-alt);
 	border-left-width: #{$spacing-increment}px;
 	border-radius: $border-radius;
 	position: relative;
@@ -13,20 +13,20 @@
 	cursor: default;
 
 	&.info {
-		border-color: $c-info;
-		color: darken($c-info, 30%);
+		border-color: var(--c-info);
+		color: var(--c-info-alt);
 	}
 	&.success {
-		border-color: $c-success;
-		color: darken($c-success, 30%);
+		border-color: var(--c-success);
+		color: var(--c-success-alt);
 	}
 	&.warning {
-		border-color: $c-warning;
-		color: darken($c-warning, 30%);
+		border-color: var(--c-warning);
+		color: var(--c-warning-alt);
 	}
 	&.danger {
-		border-color: $c-danger;
-		color: darken($c-danger, 30%);
+		border-color: var(--c-danger);
+		color: var(--c-danger-alt);
 	}
 
 	&.shaded:hover {
@@ -45,11 +45,11 @@
 		border: 0px;
 		background: none;
 		cursor: pointer;
-		color: $c-default;
+		color: var(--c-default);
 		transition: color .3s ease-in-out;
 		user-select: none;
 		&:hover {
-			color: $c-contrast;
+			color: var(--c-contrast);
 		}
 	}
 }

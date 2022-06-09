@@ -5,21 +5,21 @@ textarea.form-input {
     font-size: $font-base;
     padding: $spacing-increment * 2px;
     width: 100%;
-    border: 1px solid $c-default;
+    border: 1px solid var(--c-default);
     border-radius: $border-radius;
     position: relative;
     display: block;
     transition: border-color .2s;
     &:focus {
-        border-color: $c-info;
+        border-color: var(--c-info);
         & + .form-fancy-input-bar {
-            background-color: $c-info;
+            background-color: var(--c-info);
         }
     }
     &:not(:valid) {
-        border-color: $c-danger;
+        border-color: var(--c-danger);
         & + .form-fancy-input-bar {
-            background-color: $c-danger;
+            background-color: var(--c-danger);
         }
     }
     &.form-fancy {
@@ -27,10 +27,10 @@ textarea.form-input {
         &:not([type="checkbox"]) {
             border: none;
             background: none;
-            border-bottom: 2px solid $c-default;
+            border-bottom: 2px solid var(--c-default);
             transition: border-color .2s;
             &:focus {
-                border-bottom-color: $c-info;
+                border-bottom-color: var(--c-info);
             }
         }
     }
@@ -55,7 +55,7 @@ select.form-input {
     option {
         padding: 1px * $spacing-increment 3px * $spacing-increment;
         &[disabled] {
-            color: $c-default;
+            color: var(--c-default);
         }
     }
     optgroup {
@@ -69,7 +69,7 @@ input.form-input {
         height: 1em;
         margin: 2px * $spacing-increment;
         &.form-fancy:before {
-            background-color: $c-main;
+            background-color: var(--c-main);
         }
         &:before, &:after {
             content: ' ';
@@ -80,7 +80,7 @@ input.form-input {
             height: $font-base;
             top: 0px;
             left: 0px;
-            border: 1px solid $c-default;
+            border: 1px solid var(--c-default);
             border-radius: $border-radius;
             background-color: white;
         }
@@ -92,10 +92,10 @@ input.form-input {
             height: 0.6em;
         }
         &:checked:after {
-            background-color: $c-default;
+            background-color: var(--c-default);
         }
         &:hover:before {
-            background-color: darken($c-main, 10%);
+            background-color: var(--c-main-alt);
         }
     }
     &[type="radio"] {
@@ -111,41 +111,41 @@ input.form-input {
 }
 // Buttons
 @mixin buttonColor($mixin-color) {
-    background-color: $mixin-color;
-    border-color: darken($mixin-color, 20%);
-    color: $c-main;
+    background-color: var(#{'--c-' + $mixin-color});
+    border-color: var(#{'--c-' + $mixin-color + '-alt'});
+    color: var(--c-light);
     &:hover {
-        color: $c-main;
-        background: darken($mixin-color, 5%);
+        color: var(--c-light);
+        background: var(#{'--c-' + $mixin-color + '-hov'});
     }
 }
 .button {
     display: inline-block;
-    background: darken($c-main, 10%);
-    color: $c-contrast;
+    background: var(--c-main-alt);
+    color: var(--c-contrast);
     font-size: $font-base;
     padding: $spacing-increment * 2px $spacing-increment * 3px;
-    border: 1px solid $c-default;
+    border: 1px solid var(--c-default);
     border-radius: $border-radius;
     position: relative;
     cursor: pointer;
     margin: $spacing-increment * 1px .2em;
     text-decoration: none;
     &:hover {
-        color: $c-contrast;
-        background: darken($c-main, 15%);
+        color: var(--c-contrast);
+        background: var(--c-main);
     }
     &.info {
-        @include buttonColor($c-info);
+        @include buttonColor("info");
     }
     &.success {
-        @include buttonColor($c-success);
+        @include buttonColor("success");
     }
     &.warning {
-        @include buttonColor($c-warning);
+        @include buttonColor("warning");
     }
     &.danger {
-        @include buttonColor($c-danger);
+        @include buttonColor("danger");
     }
     &.shaded:hover {
 		box-shadow: $shadow-hover;

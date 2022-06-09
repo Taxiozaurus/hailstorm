@@ -10,16 +10,16 @@
 		&.heading {
 			margin-top: #{$spacing-increment * 4}px;
 			padding-bottom: #{$spacing-increment}px;
-			border-bottom: 1px solid $c-default;
+			border-bottom: 1px solid var(--c-default);
 		}
 		&.shaded {
 			text-shadow: 0px // h-offset
 				#{$spacing-increment}px // v-offset
 				#{$spacing-increment*2}px // blur
-				$c-shadow;
+				var(--c-shadow);
 		}
 		&.inverted {
-			color: $c-main;
+			color: var(--c-main);
 		}
 	}
 }
@@ -32,14 +32,14 @@ small, sub, sup {
 	font-size: $font-base / 1.5;
 }
 blockquote {
-	border-left: $spacing-increment * 1px solid darken($c-main, 5%);
+	border-left: $spacing-increment * 1px solid var(--c-main-hov);
 	padding: $spacing-increment * 3px $spacing-increment * 4px;
-	background-color: $c-main;
-	color: $c-contrast;
+	background-color: var(--c-main);
+	color: var(--c-contrast);
 	.source {
 		width: auto;
 		margin-left: 60px;
-		color: $c-default;
+		color: var(--c-default);
 		position: relative;
 		&:before {
 			content: "";
@@ -47,7 +47,7 @@ blockquote {
 			top: 50%;
 			left: -30px;
 			width: 20px;
-			border-bottom: 1px solid $c-default;
+			border-bottom: 1px solid var(--c-default);
 		}
 	}
 }

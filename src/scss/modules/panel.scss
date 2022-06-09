@@ -8,13 +8,13 @@
 
 	& &-heading {
 		font-size: $font-base * 1.5;
-		border-bottom: 1px solid $c-default;
+		border-bottom: 1px solid var(--c-default);
 	}
 	& &-footer {
 		margin-top: #{$spacing-increment * 2}px;
-		border-top: 1px solid $c-default;
+		border-top: 1px solid var(--c-default);
 		text-align: right;
-		color: $c-default;
+		color: var(--c-default);
 	}
 	& &-body, & &-heading, & &-footer {
 		display: block;
